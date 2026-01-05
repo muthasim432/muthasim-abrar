@@ -96,7 +96,7 @@
 }
 
 .carousel-item.active .project-card {
-  box-shadow: 0 20px 60px rgba(255, 30, 122, 0.3);
+  box-shadow: none;
   transform: scale(1.05);
 }
 

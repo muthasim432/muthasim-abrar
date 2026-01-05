@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { FaTimes } from 'react-icons/fa';
+import { X } from 'lucide-react';
 import '../css/comingsoon.css';
 
 const ComingSoonModal = ({ isOpen, onClose, onJoinWaitList }) => {
@@ -24,7 +24,7 @@ const ComingSoonModal = ({ isOpen, onClose, onJoinWaitList }) => {
     <div className="coming-soon-modal-overlay" onClick={handleOverlayClick}>
       <div className="coming-soon-modal-content">
         <button onClick={onClose} className="coming-soon-close-button">
-          <FaTimes />
+          <X size={20} />
         </button>
 
         <div className="coming-soon-icon">🚀</div>

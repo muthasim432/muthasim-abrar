@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaTimes, FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
+import { X, CheckCircle, AlertCircle } from "lucide-react";
 
 const SuccessModal = ({ isOpen, onClose, title, message, isError = false }) => {
   if (!isOpen) return null;
@@ -15,11 +15,11 @@ const SuccessModal = ({ isOpen, onClose, title, message, isError = false }) => {
     <div className="success-modal-overlay" onClick={handleOverlayClick}>
       <div className="success-modal-content">
         <button onClick={onClose} className="success-modal-close-btn">
-          <FaTimes />
+          <X size={18} />
         </button>
 
         <div className="success-modal-icon">
-          {isError ? <FaExclamationCircle /> : <FaCheckCircle />}
+          {isError ? <AlertCircle size={64} /> : <CheckCircle size={64} />}
         </div>
 
         <div className="success-modal-header">

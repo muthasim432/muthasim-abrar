@@ -1,15 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './header';
 import Footer from './footer';
-import DemoSignupModal from '../demo/demo-signupmodal';
-import ComingSoonModal from './ComingSoonModal';
-import { useModalLogic } from '../logic/modalLogic';
 
 /**
  * Reusable Business Page Layout
- * Wraps common elements (Header, Footer, Modal) around custom content
+ * Wraps common elements (Header, Footer) around custom content
  */
 const BusinessPageLayout = ({
   children,
@@ -25,26 +22,12 @@ const BusinessPageLayout = ({
   footerContactEmail = null,
   footerContactPhone = null
 }) => {
-  const { isModalOpen, modalData, openModal, closeModal } = useModalLogic();
-  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
-
-  const openComingSoonModal = () => {
-    setIsComingSoonOpen(true);
-  };
-
-  const closeComingSoonModal = () => {
-    setIsComingSoonOpen(false);
-  };
-
-  const handleJoinWaitList = () => {
-    openModal({ selectedServices: ['lead-generation-service'] });
-  };
+  const openModal = () => {}; // Placeholder for compatibility
 
   return (
     <div className="business-page">
       <Header
         openModal={openModal}
-        openComingSoonModal={openComingSoonModal}
         customNavigation={customNavigation}
         primaryButton={headerPrimaryButton}
         secondaryButton={headerSecondaryButton}
@@ -64,21 +47,6 @@ const BusinessPageLayout = ({
         tagline={footerTagline}
         contactEmail={footerContactEmail}
         contactPhone={footerContactPhone}
-      />
-
-      {/* Demo Signup Modal */}
-      <DemoSignupModal
-        isOpen={isModalOpen}
-        onClose={closeModal}
-        initialEmail={modalData.email}
-        initialSelectedServices={modalData.selectedServices}
-      />
-
-      {/* Coming Soon Modal */}
-      <ComingSoonModal
-        isOpen={isComingSoonOpen}
-        onClose={closeComingSoonModal}
-        onJoinWaitList={handleJoinWaitList}
       />
     </div>
   );

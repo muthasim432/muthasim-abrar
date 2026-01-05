@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { FaStar, FaGoogle } from 'react-icons/fa';
+import { Star } from 'lucide-react';
 import '../css/googlereviewsslider.css';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || process.env.REACT_APP_API_URL;
@@ -101,15 +101,15 @@ const GoogleReviewsSlider = () => {
     for (let i = 0; i < 5; i++) {
       if (i < fullStars) {
         stars.push(
-          <FaStar key={i} className="star-icon filled" />
+          <Star key={i} className="star-icon filled" size={16} fill="currentColor" />
         );
       } else if (i === fullStars && hasHalfStar) {
         stars.push(
-          <FaStar key={i} className="star-icon half-filled" />
+          <Star key={i} className="star-icon half-filled" size={16} />
         );
       } else {
         stars.push(
-          <FaStar key={i} className="star-icon empty" />
+          <Star key={i} className="star-icon empty" size={16} />
         );
       }
     }
@@ -154,8 +154,7 @@ const GoogleReviewsSlider = () => {
         <div className="reviews-slider-container">
           <div className="section-header">
             <span className="section-pill">
-              <FaGoogle style={{ marginRight: '6px' }} />
-              Google Reviews
+                            Google Reviews
             </span>
             <h2 className="section-title">What Our Clients Say</h2>
           </div>
