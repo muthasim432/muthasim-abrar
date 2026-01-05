@@ -1,0 +1,119 @@
+/* CTA Section */
+.cta-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1A0C4F 0%, #2A1C5F 100%);
+  text-align: center;
+}
+
+.cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #FF1E7A 0%, #FF6B9D 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 30, 122, 0.3);
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(255, 30, 122, 0.5);
+}
+
+/* Two Button Layout */
+.cta-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.cta-button.primary {
+  background: linear-gradient(135deg, #FF1E7A 0%, #FF6B9D 100%);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button.secondary:hover {
+  background: white;
+  color: #1A0C4F;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 32px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .cta-buttons-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-buttons-wrapper .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 60px 15px;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .cta-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}

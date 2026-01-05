@@ -1,0 +1,428 @@
+/* Home Hero Section Styles */
+.home-hero-section {
+  padding: 40px 20px 30px;
+  background:#fff;
+    /* linear-gradient(135deg, #f8f2ff 0%, #e9e4ff 50%, #f8f2ff 100%); */
+
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Glowing background effect */
+.home-hero-section::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at center,
+    rgba(183, 156, 255, 0.3) 0%,
+    rgba(183, 156, 255, 0.15) 20%,
+    transparent 60%
+  );
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.home-hero-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Removed announcement badge and reviews - no longer needed */
+
+/* Main Heading */
+.home-hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1A0C4F;
+  margin: 5px 0 20px 0;
+  letter-spacing: -1px;
+}
+
+.text-highlight {
+  color: #FF1E7A;
+  display: inline-block;
+}
+
+/* Typing Animation */
+.typing-cursor {
+  color: #FF1E7A;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Features Pills */
+.features-pills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.pill {
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid;
+  display: inline-block;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pill.live-chat {
+  border-color: #FF8A65;
+  color: #FF8A65;
+  background: transparent;
+}
+
+.pill.ticketing {
+  border-color: #FF69B4;
+  color: #FF69B4;
+  background: transparent;
+}
+
+.pill.knowledge {
+  border-color: #4169E1;
+  color: #4169E1;
+  background: transparent;
+}
+
+.pill.crm {
+  border-color: #FF6B6B;
+  color: #FF6B6B;
+  background: transparent;
+}
+
+.pill.chat-pages {
+  border-color: #4CAF50;
+  color: #4CAF50;
+  background: transparent;
+}
+
+/* Free Badge */
+.free-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.free-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A0C4F;
+}
+
+.free-dash {
+  color: #666;
+  font-size: 20px;
+}
+
+.read-why {
+  color: #4169E1;
+  font-size: 18px;
+  text-decoration: underline;
+  transition: opacity 0.2s;
+}
+
+.read-why:hover {
+  opacity: 0.8;
+}
+
+/* Email Input Wrapper */
+.hero-email-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px 0 20px 0;
+}
+
+/* Email Input Container */
+.hero-email {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Email Input Field */
+.email-input {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: 2px solid #1A0C4F;
+  border-radius: 8px;
+  background: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Validation States */
+.hero-email.error .email-input {
+  border-color: #EF4444;
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.hero-email.valid .email-input {
+  border-color: #10B981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.email-input::placeholder {
+  color: #999;
+  font-size: 16px;
+}
+
+.email-input:focus {
+  border-color: #2A1C5F;
+  box-shadow: 0 0 0 3px rgba(26, 12, 79, 0.1);
+}
+
+.hero-email.error .email-input:focus {
+  border-color: #EF4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.hero-email.valid .email-input:focus {
+  border-color: #10B981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Submit Button */
+.email-submit-btn {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1A0C4F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.email-submit-btn:hover:not(:disabled) {
+  background: #2A1C5F;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 12, 79, 0.3);
+}
+
+.email-submit-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Validation Messages */
+.hero-email-error {
+  color: #EF4444;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.hero-email-success {
+  color: #10B981;
+  font-size: 14px;
+  margin-top: 8px;
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Hero Buttons (alternative to email input) */
+.hero-buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 10px 0 20px 0;
+}
+
+.hero-btn-primary {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1A0C4F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn-primary:hover {
+  background: #2A1C5F;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 12, 79, 0.3);
+}
+
+.hero-btn-secondary {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: transparent;
+  color: #1A0C4F;
+  border: 2px solid #1A0C4F;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn-secondary:hover {
+  background: #1A0C4F;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 12, 79, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-hero-section {
+    padding: 30px 15px 40px;
+  }
+
+  .home-hero-container {
+    gap: 30px;
+  }
+
+  .home-hero-title {
+    font-size: 32px;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+  }
+
+  .hero-email-wrapper {
+    margin: 5px 0 15px 0;
+    padding: 0 10px;
+  }
+
+  .hero-email {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .email-input {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .email-submit-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .features-pills {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .pill {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
+  .free-badge {
+    margin-top: 5px;
+  }
+
+  .free-text {
+    font-size: 16px;
+  }
+
+  .read-why {
+    font-size: 14px;
+  }
+
+  .hero-buttons-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-btn-primary,
+  .hero-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-hero-section {
+    padding: 25px 10px 35px;
+  }
+
+  .home-hero-title {
+    font-size: 26px;
+    margin: 0 0 12px 0;
+  }
+
+  .hero-email-wrapper {
+    max-width: 100%;
+    padding: 0 5px;
+    margin: 5px 0 12px 0;
+  }
+
+  .email-input {
+    font-size: 14px;
+    padding: 12px 14px;
+  }
+
+  .email-submit-btn {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .features-pills {
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pill {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .free-text {
+    font-size: 14px;
+  }
+
+  .read-why {
+    font-size: 12px;
+  }
+}

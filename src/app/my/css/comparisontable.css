@@ -1,0 +1,173 @@
+/* Comparison Table Wrapper */
+.comparison-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 40px 0;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(26, 12, 79, 0.08);
+}
+
+/* Table */
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 16px;
+}
+
+/* Table Header */
+.table-header {
+  padding: 20px 30px;
+  background: #f8f9fa;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1A0C4F;
+  text-align: left;
+  border-bottom: 2px solid #e9e4ff;
+}
+
+.table-header:first-child {
+  border-top-left-radius: 16px;
+}
+
+.table-header:last-child {
+  border-top-right-radius: 16px;
+  text-align: center;
+}
+
+.table-header:not(:first-child):not(:last-child) {
+  text-align: center;
+}
+
+/* Highlighted Column */
+.table-header.highlighted {
+  background: linear-gradient(135deg, #f8f2ff 0%, #e9e4ff 100%);
+  color: #1A0C4F;
+  position: relative;
+}
+
+/* Table Rows */
+.table-row {
+  transition: background-color 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: #fafafa;
+}
+
+.table-row:last-child .table-cell {
+  border-bottom: none;
+}
+
+/* Table Cells */
+.table-cell {
+  padding: 18px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+.table-cell:not(:first-child) {
+  text-align: center;
+}
+
+/* Feature Cell (First Column) */
+.feature-cell {
+  font-weight: 600;
+  color: #1A0C4F;
+}
+
+/* Highlighted Column Cells */
+.table-cell.highlighted {
+  background: linear-gradient(135deg, #fdfbff 0%, #f9f7ff 100%);
+  font-weight: 600;
+  position: relative;
+}
+
+/* Check and Cross Marks */
+.check-mark {
+  color: #4CAF50;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  animation: checkPop 0.3s ease;
+}
+
+.cross-mark {
+  color: #FF5252;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  opacity: 0.7;
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Badge Style */
+.table-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #B79CFF 0%, #9B7FFF 100%);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .comparison-table-wrapper {
+    border-radius: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    min-width: 600px;
+    font-size: 14px;
+  }
+
+  .table-header {
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+
+  .table-cell {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  .check-mark,
+  .cross-mark {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-header {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .table-cell {
+    padding: 12px 16px;
+    font-size: 13px;
+  }
+
+  .comparison-table {
+    min-width: 500px;
+  }
+}

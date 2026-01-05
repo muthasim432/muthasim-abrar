@@ -1,0 +1,182 @@
+/* Coming Soon Modal Overlay */
+.coming-soon-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal Content */
+.coming-soon-modal-content {
+  position: relative;
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px 50px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(26, 12, 79, 0.3);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button */
+.coming-soon-close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.coming-soon-close-button:hover {
+  background: #f0f0f0;
+  color: #1A0C4F;
+  transform: rotate(90deg);
+}
+
+/* Icon */
+.coming-soon-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Title */
+.coming-soon-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1A0C4F;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Message */
+.coming-soon-message {
+  font-size: 18px;
+  color: #1a0c4f;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Button */
+.coming-soon-cta-button {
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  background: #1A0C4F;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(183, 156, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.coming-soon-cta-button:hover {
+  background: linear-gradient(135deg, #9B7FFF 0%, #8566FF 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(183, 156, 255, 0.6);
+}
+
+.coming-soon-cta-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .coming-soon-modal-content {
+    padding: 50px 30px 40px;
+  }
+
+  .coming-soon-icon {
+    font-size: 60px;
+  }
+
+  .coming-soon-title {
+    font-size: 28px;
+  }
+
+  .coming-soon-message {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .coming-soon-cta-button {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-soon-modal-content {
+    padding: 40px 20px 30px;
+  }
+
+  .coming-soon-icon {
+    font-size: 50px;
+  }
+
+  .coming-soon-title {
+    font-size: 24px;
+  }
+
+  .coming-soon-message {
+    font-size: 15px;
+  }
+
+  .coming-soon-cta-button {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}

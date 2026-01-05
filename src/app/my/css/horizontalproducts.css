@@ -1,0 +1,309 @@
+/* Horizontal Products Section */
+.horizontal-products-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f8f2ff 0%, #ffffff 50%, #f8f2ff 100%);
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple glow effect matching brand */
+.horizontal-products-section::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%,
+    rgba(183, 156, 255, 0.2) 0%,
+    rgba(183, 156, 255, 0.1) 30%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+
+.horizontal-products-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section header wrapper */
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Pills/Badge */
+.section-pill {
+  display: inline-block;
+  padding: 8px 24px;
+  background: rgba(183, 156, 255, 0.15);
+  color: #1A0C4F;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid rgba(183, 156, 255, 0.3);
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1A0C4F;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* Subtitle */
+.section-subtitle {
+  font-size: 20px;
+  color: #1a0c4f;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* Horizontal scrolling container */
+.horizontal-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd #f8f9fa;
+}
+
+/* Custom scrollbar for webkit browsers - only show on desktop */
+.horizontal-scroll-container:not(.mobile)::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal-scroll-container:not(.mobile)::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.horizontal-scroll-container:not(.mobile)::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.horizontal-scroll-container:not(.mobile)::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* Hide scrollbar on mobile */
+.horizontal-scroll-container.mobile {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll-container.mobile::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.horizontal-scroll-container.mobile .horizontal-product-card {
+  scroll-snap-align: start;
+}
+
+/* Dots navigation */
+.products-dots-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.products-dots-navigation .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.products-dots-navigation .dot:hover {
+  background: #aaa;
+  transform: scale(1.2);
+}
+
+.products-dots-navigation .dot.active {
+  width: 10px;
+  height: 10px;
+  background: #1A0C4F;
+}
+
+/* Products grid - HORIZONTAL layout */
+.horizontal-products-grid {
+  display: flex;
+  gap: 24px;
+  padding: 0 4px;
+  min-width: fit-content;
+}
+
+/* Product card - Fixed width for horizontal layout */
+.horizontal-product-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(26, 12, 79, 0.15);
+  min-width: 320px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  border: 2px solid rgba(183, 156, 255, 0.2);
+}
+
+.horizontal-product-card:hover {
+  box-shadow: 0 15px 40px rgba(26, 12, 79, 0.25);
+  transform: translateY(-5px);
+  border-color: rgba(183, 156, 255, 0.5);
+}
+
+/* Product media section - EXACT same dimensions */
+.horizontal-product-card .product-media {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  background: #f6f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.horizontal-product-card .product-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Product info section - EXACT same spacing */
+.horizontal-product-card .product-info {
+  padding: 14px 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: 5px solid #0000;
+}
+
+.horizontal-product-card .product-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #1A0C4F;
+  letter-spacing: -0.3px;
+}
+
+.horizontal-product-card .product-desc {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  min-height: 3rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.horizontal-product-card .product-amount {
+  display: none;
+}
+
+/* Loading skeleton - horizontal layout */
+.products-skeleton-horizontal {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.skeleton-card-horizontal {
+  min-width: 320px;
+  height: 380px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #eee 25%, #f7f7f7 37%, #eee 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Empty state */
+.products-empty {
+  width: 100%;
+  padding: 40px;
+  border: 2px dashed #ddd;
+  border-radius: 12px;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* Responsive - maintain horizontal scroll */
+@media (max-width: 768px) {
+  .horizontal-products-section {
+    padding: 40px 15px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-pill {
+    font-size: 12px;
+    padding: 5px 16px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+
+  .horizontal-product-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  .skeleton-card-horizontal {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 520px) {
+  .horizontal-product-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+
+  .skeleton-card-horizontal {
+    min-width: 260px;
+  }
+
+  .horizontal-products-grid {
+    gap: 16px;
+  }
+}

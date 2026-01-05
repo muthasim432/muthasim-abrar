@@ -1,0 +1,120 @@
+/* Animated Announcements Container */
+.announcements-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 10px;
+  min-height: 45px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.announcements-track {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Individual announcement item */
+.announcement-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideUpFade 3.5s infinite;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+
+/* Badge style announcements */
+.announcement-badge-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  background: rgba(220, 220, 240, 0.5);
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.announcement-badge {
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.announcement-text {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Clean spacing after badge items */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .announcements-container {
+    max-width: 95%;
+    min-height: 38px;
+    margin: 0 auto 8px;
+  }
+
+  .announcement-badge-item {
+    padding: 6px 14px;
+    gap: 8px;
+  }
+
+  .announcement-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .announcement-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .announcements-container {
+    max-width: 100%;
+    padding: 0 10px;
+    min-height: 36px;
+  }
+
+  .announcement-badge-item {
+    padding: 5px 12px;
+    gap: 6px;
+  }
+
+  .announcement-badge {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+
+  .announcement-text {
+    font-size: 12px;
+  }
+}

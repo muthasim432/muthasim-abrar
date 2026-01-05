@@ -1,0 +1,260 @@
+/* Why Us Section */
+.whyus-section {
+  padding: 100px 20px;
+  background: #f9f7ff;
+  position: relative;
+}
+
+.whyus-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.whyus-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Pill Badge */
+.whyus-pill {
+  display: inline-block;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #B79CFF 0%, #9B7FFF 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.whyus-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1A0C4F;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.whyus-subtitle {
+  font-size: 20px;
+  color: #1a0c4f;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.whyus-subtitle strong {
+  color: #1A0C4F;
+  font-weight: 700;
+}
+
+/* Features Grid */
+.whyus-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  align-items: start;
+}
+
+/* Feature Card */
+.whyus-feature-card {
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Icon Container */
+.feature-illustration {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.illustration-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.illustration-circle:hover {
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.5;
+}
+
+/* Feature Content */
+.feature-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A0C4F;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.feature-description {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .whyus-features {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .whyus-section {
+    padding: 60px 20px;
+  }
+
+  .whyus-header {
+    margin-bottom: 50px;
+  }
+
+  .whyus-title {
+    font-size: 36px;
+  }
+
+  .whyus-subtitle {
+    font-size: 18px;
+  }
+
+  .illustration-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .feature-title {
+    font-size: 24px;
+  }
+
+  .feature-description {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyus-title {
+    font-size: 28px;
+  }
+
+  .whyus-subtitle {
+    font-size: 16px;
+  }
+
+  .illustration-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .feature-title {
+    font-size: 20px;
+  }
+}
+
+/* CTA Button Wrapper */
+.whyus-cta-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.whyus-cta-wrapper .cta-button {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1A0C4F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.whyus-cta-wrapper .cta-button:hover {
+  background: #2A1C5F;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 12, 79, 0.3);
+}
+
+/* Two Button Layout */
+.whyus-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.whyus-buttons .cta-button {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.whyus-buttons .cta-button.primary {
+  background: #1A0C4F;
+  color: white;
+}
+
+.whyus-buttons .cta-button.secondary {
+  background: transparent;
+  color: #1A0C4F;
+  border: 2px solid #1A0C4F;
+}
+
+.whyus-buttons .cta-button.secondary:hover {
+  background: #1A0C4F;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .whyus-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .whyus-buttons .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .whyus-cta-wrapper .cta-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .whyus-cta-wrapper .cta-button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}

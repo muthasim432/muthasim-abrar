@@ -1,0 +1,140 @@
+/* Comparison Section */
+.comparison-section {
+  padding: 30px;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.comparison-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Header */
+.comparison-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Pill Badge */
+.section-pill {
+  display: inline-block;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #B79CFF 0%, #9B7FFF 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 50px;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.comparison-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1A0C4F;
+  margin: 0 0 10px 0;
+  line-height: 1.2;
+}
+
+.comparison-subtitle {
+  font-size: 18px;
+  color: #1a0c4f;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Comparison Blocks */
+.comparison-block {
+  margin-bottom: 60px;
+}
+
+.comparison-block:last-child {
+  margin-bottom: 0;
+}
+
+.comparison-block-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A0C4F;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+
+  .comparison-header {
+    margin-bottom: 40px;
+  }
+
+  .comparison-title {
+    font-size: 32px;
+  }
+
+  .comparison-subtitle {
+    font-size: 16px;
+  }
+
+  .comparison-block-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .comparison-block {
+    margin-bottom: 40px;
+  }
+
+}
+@media (max-width: 480px) {
+  .comparison-title {
+    font-size: 28px;
+  }
+
+  .comparison-subtitle {
+    font-size: 15px;
+  }
+}
+
+/* CTA Button Wrapper */
+.comparison-cta-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.comparison-cta-wrapper .cta-button {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #1A0C4F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.comparison-cta-wrapper .cta-button:hover {
+  background: #2A1C5F;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(26, 12, 79, 0.3);
+}
+
+@media (max-width: 768px) {
+  .comparison-cta-wrapper .cta-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-cta-wrapper .cta-button {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}

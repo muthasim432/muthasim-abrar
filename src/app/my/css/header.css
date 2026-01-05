@@ -1,0 +1,362 @@
+/* Business Header Styles */
+.business-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #1A0C4F;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  font-size: 16px;
+}
+
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Section */
+.header-logo-section {
+  flex-shrink: 0;
+}
+
+.logo-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  flex-shrink: 0;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: none;
+  flex: 1;
+  padding: 0 40px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+}
+
+/* Dropdown Arrow */
+.dropdown-arrow {
+  font-size: 10px;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Desktop Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  margin-top: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  display: block;
+  padding: 12px 20px;
+  color: #1A0C4F;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+  background: #f8f9ff;
+  border-left-color: #1A0C4F;
+  padding-left: 23px;
+}
+
+/* Header Actions */
+.header-actions {
+  display: none;
+  gap: 16px;
+  align-items: center;
+}
+
+.btn-secondary,
+.btn-primary {
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  position: relative;
+}
+
+.btn-with-badge {
+  position: relative;
+}
+
+.coming-soon-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #FF1E7A;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(255, 30, 122, 0.4);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #1A0C4F;
+  border: 2px solid #ffffff;
+}
+
+.btn-primary:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  display: block;
+  /* position: absolute; */
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: #1A0C4F;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav-list {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.mobile-nav-item {
+  margin-bottom: 16px;
+}
+
+.mobile-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  padding: 12px 0;
+}
+
+/* Mobile Dropdown */
+.mobile-nav-link-with-dropdown {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-dropdown-arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  padding-left: 16px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.mobile-dropdown-item {
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0;
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+  transition: all 0.2s ease;
+}
+
+.mobile-dropdown-item:hover {
+  color: #ffffff;
+  border-left-color: #ffffff;
+  padding-left: 16px;
+}
+
+/* Mobile CTA Buttons */
+.mobile-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-cta {
+  text-align: center;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mobile-cta.btn-primary {
+  background: white;
+  color: #1A0C4F;
+}
+
+.mobile-cta.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+
+  .header-actions {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-container {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .logo svg {
+    width: 40px;
+    height: 43px;
+  }
+}
