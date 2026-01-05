@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { validateEmail } from '../../../utils/emailValidator';
+import { validateEmail } from '../../utils/emailValidator';
 
 /**
  * Custom hook for managing modal state and data

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import CustomIcon from '../../../assets/customlogo';
+import CustomIcon from '../../assets/customlogo';
 import { productsMenu, servicesMenu } from '../data/navigation';
 import '../css/footer.css';
 

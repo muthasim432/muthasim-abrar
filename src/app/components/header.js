@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import CustomIcon from '../../../assets/customlogo';
+import CustomIcon from '../../assets/customlogo';
 import { navigationMenu } from '../data/navigation';
 import '../css/header.css';
 

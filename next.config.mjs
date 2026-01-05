@@ -3,15 +3,6 @@ const nextConfig = {
     eslint: {
       ignoreDuringBuilds: true,
     },
-    async redirects() {
-      return [
-        {
-          source: '/',
-          destination: '/my',
-          permanent: false,
-        },
-      ];
-    },
     images: {
       dangerouslyAllowSVG: true,
       remotePatterns: [

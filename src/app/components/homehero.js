@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import AnimatedAnnouncements from './animatedannouncements';
 import TypingAnimation from './typinganimation';
-import { useEmailValidationStrict } from '../../../hooks/useEmailValidation';
+import { useEmailValidationStrict } from '../../hooks/useEmailValidation';
 import '../css/homehero.css';
 
 const HomeHero = ({

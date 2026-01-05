@@ -8,8 +8,6 @@ import WhyUs from './components/whyus';
 import Comparison from './components/comparison';
 import CTASection from './components/ctasection';
 import './css/businesshomepage.css';
-import ProjectShowcase from './components/projectshowcase';
-import TestimonialSection from './components/testimonialsection';
 import { Code2, Handshake, MessageSquareText } from 'lucide-react';
 
 // Custom navigation for portfolio page
@@ -44,7 +42,7 @@ const skillsList = {
   ]
 };
 
-const BusinessHomePage = () => {
+const HomePage = () => {
   return (
     <BusinessPageLayout
       customNavigation={portfolioNavigation}
@@ -87,12 +85,6 @@ const BusinessHomePage = () => {
                 ]}
                 freeBadgeText="Available for full-time opportunities and freelance projects"
               />
-
-              {/* Testimonial Section - Commented Out */}
-              {/* <TestimonialSection
-                title="What People Say About Me"
-                subtitle="Don't just take my word for it. Here's what clients and colleagues have to say about working with me."
-              /> */}
             </section>
 
             {/* AI Agent In Action */}
@@ -216,4 +208,4 @@ const BusinessHomePage = () => {
   );
 };
 
-export default BusinessHomePage;
+export default HomePage;
