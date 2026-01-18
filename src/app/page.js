@@ -23,11 +23,7 @@ const portfolioNavigation = [
 const experienceProjects = {
   title: 'Experience',
   links: [
-    { name: 'AI Customer Support Agent', href: '#ai-project' },
-    { name: 'E-commerce Platform', href: '#portfolio' },
-    { name: 'Mobile Ridesharing App', href: '#portfolio' },
-    { name: 'Business Management System', href: '#portfolio' },
-    { name: 'Real-time Chat Application', href: '#portfolio' }
+    { name: 'AI Customer Support Agent', href: '#ai-project' }
   ]
 };
 

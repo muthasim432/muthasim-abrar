@@ -82,19 +82,16 @@
 }
 
 @media (max-width: 768px) {
-  .cta-button {
-    width: 100%;
-    padding: 12px 20px;
-  }
-
   .cta-buttons-wrapper {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    padding: 0;
   }
 
   .cta-buttons-wrapper .cta-button {
-    width: 100%;
+    flex: 1;
     text-align: center;
+    padding: 14px 16px;
   }
 }
 

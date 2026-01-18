@@ -312,16 +312,16 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .home-hero-section {
-    padding: 30px 15px 40px;
+    padding: 50px 15px 40px;
   }
 
   .home-hero-container {
-    gap: 30px;
+    gap: 15px;
   }
 
   .home-hero-title {
     font-size: 32px;
-    margin: 0 0 15px 0;
+    margin: 0 0 5px 0;
     line-height: 1.1;
   }
 
@@ -368,7 +368,7 @@
   }
 
   .hero-buttons-wrapper {
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
     width: 100%;
     padding: 0 10px;
@@ -376,8 +376,9 @@
 
   .hero-btn-primary,
   .hero-btn-secondary {
-    width: 100%;
+    flex: 1;
     text-align: center;
+    padding: 14px 16px;
   }
 }
 
